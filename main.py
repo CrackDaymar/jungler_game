@@ -23,24 +23,28 @@ player_speed = [1, 1]
 playing = True
 
 while playing:
-    FPS.tick(120)
+    FPS.tick(300)
 
     for event in pygame.event.get():
         if event.type == QUIT:
             playing = False
-
     main_display.fill(COLOR_BLACK)
 
+    player_rect = player_rect.move(player_speed)
+    print(player_rect) #<rect(100, 700, 20, 20)
+
     if player_rect.bottom >= HEIGHT:
-        player_speed = [1, -1]
+        player_speed[1] = -player_speed[1]
 
     if player_rect.top <= 0:
-        player_speed = [-1, 1]
+        player_speed[1] = -player_speed[1]
 
-    #homework
+    if player_rect.right >= WIDTH:
+        player_speed[0] = -player_speed[0]
+
+    if player_rect.left <= 0:
+        player_speed[0] = -player_speed[0]
 
     main_display.blit(player, player_rect)
-
-    player_rect = player_rect.move(player_speed)
 
     pygame.display.flip()

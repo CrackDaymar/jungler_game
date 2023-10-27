@@ -1,4 +1,5 @@
 import random
+import pygame
 
 
 
@@ -10,3 +11,6 @@ class GameObject:
         self.y = 0  # Инициализируйте y координату объекта
         self.width = self.size  # Добавьте ширину объекта
         self.height = self.size  # Добавьте высоту объекта
+
+    def get_rect(self):
+        return pygame.Rect(self.x, self.y, self.width, self.height)

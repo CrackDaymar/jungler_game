@@ -34,6 +34,8 @@ playing = True
 
 objects = make_objects(10, HEIGHT, WIDTH)
 
+pass
+
 while playing:
 
     FPS.tick(660)

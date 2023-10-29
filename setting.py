@@ -1,0 +1,9 @@
+HEIGHT = 800
+WIDTH = 1200
+
+IMAGE_PATH = 'image/goose'
+
+COLOR_WHITE = (255, 255, 255)
+COLOR_BLACK = (0, 0, 0)
+COLOR_BLUE = (0, 0, 255)
+COLOR_GREEN = (0, 255, 0)
